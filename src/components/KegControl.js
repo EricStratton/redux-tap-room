@@ -33,10 +33,11 @@ class KegControl extends React.Component {
         formVisibleOnPage: false,
         selectedKeg: null
       });
-    }
-    this.setState(prevState => ({
+    } else {
+      this.setState(prevState => ({
       formVisibleOnPage: !prevState.formVisibleOnPage
-    }));
+      }));
+    }
   }
 
   render() {
