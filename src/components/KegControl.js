@@ -50,7 +50,7 @@ class KegControl extends React.Component {
 
   handlePoursInKeg = () => {
     const selectedKeg = this.state.selectedKeg;
-    const newQuantity = Object.assign({}, selectedKeg, { stock: parseInt(selectedKeg.quantity) - 1 });
+    const newQuantity = Object.assign({}, selectedKeg, { stock: parseInt(selectedKeg.stock) - 1 });
     const newMainKegList = this.state.mainKegList
       .filter(keg => keg.id !== this.state.selectedKeg.id)
       .concat(newQuantity);
