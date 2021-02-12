@@ -6,11 +6,11 @@ function KegDetail(props) {
 
   let sellButton; 
   let poursLeft;
-  if(keg.stock !== 0) { // Handle hiding sell button and displaying 'Keg Empty' warning when stock reaches 0.
+  if(keg.stock !== 0) {// Handle hiding sell button and displaying 'Keg Empty' warning when stock reaches 0.
     poursLeft = <h4>{ keg.stock }</h4>;
     sellButton = <button onClick={ () => onClickingPour() }>Sell</button>
   } else {
-    poursLeft = <h4><strong>Keg is Empty</strong></h4>
+      poursLeft = <h4><strong>Keg is Empty</strong></h4>;
   };
 
   return (
