@@ -16,11 +16,11 @@ function ReusableForm(props) {
         <input 
           type='number'
           name='price'
-          placeholder='0.00' />
+          placeholder='Price/Pint' />
         <input
           type='number'
           name='abv'
-          placeholder='0.0' />
+          placeholder='ABV' />
         <input 
           type='number'
           name='stock'
