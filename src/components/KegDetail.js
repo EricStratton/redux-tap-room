@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function KegDetail(props) {
-  const { keg } = props; // Object Destructuring //
+  const { keg, onClickingDelete } = props; // Object Destructuring //
   return (
     <>
       <h3>Keg Details</h3>
@@ -12,6 +12,7 @@ function KegDetail(props) {
       <h4>ABV: { keg.abv }%</h4>
       <h4>Pours: { keg.stock }</h4>
       <button onClick={ props.onClickingEdit }>Update Keg</button>
+      <button onClick={ () => onClickingDelete(keg.id) }>Remove Keg</button>
     </>
   );
 }
