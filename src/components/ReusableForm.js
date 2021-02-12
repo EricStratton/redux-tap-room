@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function ReusableFrom(props) {
   return (
@@ -24,7 +25,15 @@ function ReusableFrom(props) {
           type='number'
           name='stock'
           placeholder='124' />
+        <button type='submit'>{props.buttonText}</button>
       </form>
     </>
-  )
+  );
 }
+
+ReusableFrom.propTypes = {
+  formSubmissionHandler: PropTypes.func,
+  buttonText: PropTypes.string
+};
+
+export default ReusableFrom;
