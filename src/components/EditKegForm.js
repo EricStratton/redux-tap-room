@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReusableFrom from './ReusableForm';
+import ReusableForm from './ReusableForm';
 
 function EditKegForm(props) {
   const { keg } = props;
@@ -11,7 +11,7 @@ function EditKegForm(props) {
   }
   return (
     <>
-      <ReusableFrom
+      <ReusableForm
         formSubmissionHandler={handleEditKegFormSubmission}
         buttonText="Update Keg" />
     </>
