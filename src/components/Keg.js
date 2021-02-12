@@ -2,12 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Keg(props) {
+
+  let kegStatus;  
+  if(props.stock === 0) {   // Handle displaying keg stock warning on keg stock view. //
+    kegStatus = <h4><strong>Keg Empty</strong></h4>;
+  } else if(props.stock <= 10) {
+    kegStatus = <h4><strong>Keg Low</strong></h4>;
+  }; 
+
   return (
     <>
       <div onClick = {() => props.whenKegClicked(props.id)}>
         <h3>{ props.name }</h3>
+        <h4>${ props.price }/pint</h4>
+        { kegStatus }
+        <hr />
       </div>
-    </>
+    </> 
   );
 }
 
