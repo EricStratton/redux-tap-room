@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 function Keg(props) {
 
   const myStyledKeg = {
-    fontFamily: 'sans-serif',
-    paddingLeft: '25px'
+    paddingLeft: '10px'
   }
 
   let kegStatus;  
