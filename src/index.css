@@ -23,3 +23,19 @@ img {
 #header {
   background-color: antiquewhite;
 }
+
+button {
+  padding: 5px;
+  margin-top: auto;
+  margin-left: 10px;
+}
+
+input {
+  width: 25%;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 2px;
+  margin-left: 10px;
+}
