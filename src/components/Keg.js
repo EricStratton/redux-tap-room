@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Keg() {
+function Keg(props) {
   return (
     <>
       <div onClick = {() => props.whenKegClicked(props.id)}>
