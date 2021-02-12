@@ -1,5 +1,6 @@
 import React from 'react';
-import Keg from './Keg';
+import KegList from './KegList';
+import NewKegForm from './NewKegForm';
 
 class KegControl extends React.Component {
 
@@ -10,13 +11,28 @@ class KegControl extends React.Component {
     };
   }
 
+  handleClick = () => {
+    this.setState(prevState => ({
+      formVisibleOnPage: !prevState.formVisibleOnPage
+    }));
+  }
+
   render() {
     let currentlyVisibleState = null;
+    let buttonText = null;
     if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewKegForm />
+      buttonText = "Return to Keg List";
     } else {
       currentlyVisibleState = <KegList />
+      buttonText = "Add Keg";
     }
+    return (
+      <>
+        {currentlyVisibleState}
+        <button onClick={this.handleClick}>{buttonText}</button>
+      </>
+    )
   }
 }
 
