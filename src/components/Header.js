@@ -1,9 +1,10 @@
 import React from 'react';
+import customLogoImage from './../img/customLogoImage.png'
 
 function Header() {
   return (
     <>
-    <h1>Ricc's Rickety Tap House</h1>
+    <img src={customLogoImage} alt="A beer and wheat" />
     <hr />
     </>
   );
