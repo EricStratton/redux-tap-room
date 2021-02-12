@@ -9,13 +9,13 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Roboto',
     monospace;
 }
 
 img {
   margin: auto;
-  width: 15%;
+  width: 10%;
   height: auto;
   display: block;
 }
