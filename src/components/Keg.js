@@ -7,7 +7,7 @@ function Keg(props) {
   if(props.stock === 0) {   // Handle displaying keg stock warning on keg stock view. //
     kegStatus = <h4><strong>Keg Empty</strong></h4>;
   } else if(props.stock <= 10) {
-    kegStatus = <h4><strong>Keg Low</strong></h4>;
+    kegStatus = <h4><strong>Almost Empty</strong></h4>;
   }; 
 
   return (
