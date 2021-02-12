@@ -4,15 +4,15 @@ import PropTypes from 'prop-types';
 function KegDetail(props) {
   const { keg, onClickingDelete, onClickingPour } = props; // Object Destructuring //
 
-  let sellButton;
+  let sellButton; 
   let poursLeft;
-  if(keg.stock !== 0) {
+  if(keg.stock !== 0) { // Handle hiding sell button and displaying 'Keg Empty' warning when stock reaches 0.
     poursLeft = <h4>{ keg.stock }</h4>;
     sellButton = <button onClick={ () => onClickingPour() }>Sell</button>
   } else {
     poursLeft = <h4><strong>Keg is Empty</strong></h4>
   };
-  
+
   return (
     <>
       <h3>Keg Details</h3>
