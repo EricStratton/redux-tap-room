@@ -3,6 +3,16 @@ import PropTypes from 'prop-types';
 
 function KegDetail(props) {
   const { keg, onClickingDelete, onClickingPour } = props; // Object Destructuring //
+
+  let sellButton;
+  let poursLeft;
+  if(keg.stock !== 0) {
+    poursLeft = <h4>{ keg.stock }</h4>;
+    sellButton = <button onClick={ () => onClickingPour() }>Sell</button>
+  } else {
+    poursLeft = <h4><strong>Keg is Empty</strong></h4>
+  };
+  
   return (
     <>
       <h3>Keg Details</h3>
@@ -10,8 +20,8 @@ function KegDetail(props) {
       <h3>{ keg.name } - { keg.brand }</h3>
       <h4>Price: ${ keg.price }/pint</h4>
       <h4>ABV: { keg.abv }%</h4>
-      <h4>Pours: { keg.stock }</h4>
-      <button onClick={ () => onClickingPour() }>Sell</button>
+      { poursLeft }
+      { sellButton }
       <button onClick={ props.onClickingEdit }>Update Keg</button>
       <button onClick={ () => onClickingDelete(keg.id) }>Remove Keg</button>
     </>
