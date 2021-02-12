@@ -11,8 +11,9 @@ function KegDetail(props) {
       <h4>Price: ${ keg.price }/pint</h4>
       <h4>ABV: { keg.abv }%</h4>
       <h4>Pours: { keg.stock }</h4>
+      <button onClick={ props.onClickingEdit }>Update Keg</button>
     </>
-  )
+  );
 }
 
 KegDetail.propTypes = {
