@@ -4,8 +4,10 @@ import customLogoImage from './../img/customLogoImage.png'
 function Header() {
   return (
     <>
-    <img src={customLogoImage} alt="A beer and wheat" />
-    <hr />
+      <div id="header">
+        <img src={customLogoImage} alt="A beer and wheat" />
+        <hr />
+      </div>
     </>
   );
 }
