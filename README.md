@@ -40,6 +40,10 @@ Create new kegs with name, brand, and price as properties, update existing keg d
 - Run command `$ npm run build` to ensure that project succesfully builds on your device
 - Run command `$ npm run start` to open webpage in defualt browse with an `3000` local server 
 
+### Component Diagram:
+
+![Component Diagram](src\img\TapRoom.png)
+
 ## Known Bugs
 
 There are no known bugs at this time.
