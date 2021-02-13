@@ -1,12 +1,12 @@
 ## Ricc's Rickety TapRoom - React WebPage 
 
-### _Full CRUD webpage for kegs at at TapRoom, vs: 02/12/2021_
+### _Full CRUD webpage for mainting a keg list at at TapRoom, vs: 02/12/2021_
 
 ### _Created by: Eric Stratton_
 
 ## Description
 
-Create new kegs with name, brand, and price, update existing kegs incase of an error, click on keg in list to view its details, remove keg from list when necessary. 
+Create new kegs with name, brand, and price as properties, update existing keg details, click on keg in list to view its details, remove keg from list when necessary. 
 
 ## Setup/Instillation
 
@@ -15,7 +15,7 @@ Create new kegs with name, brand, and price, update existing kegs incase of an e
 - Internet browser
 - Code editor if you wish to view/edit the code (recommended)
 - Node.js
-- 
+- React
 
 ### Node:
 
@@ -25,20 +25,20 @@ Create new kegs with name, brand, and price, update existing kegs incase of an e
 
 - Download this repository by clicking the green 'Code' icon and selecting download zip
 - Use your favorite zip.file opener to extract files to your local device
+- Follow instructions below begging with line instructing to run command `$ cd TapRoom`
 
 ### Terminal:
 
 - Open command terminal on local device
 - Navigate to desktop in terminal using `$ cd desktop`
 - Copy repository link by clicking on green 'Code' icon and clicking the clipboard to the right of the url
-- Use command `$ git clone {specific_repository_URL}`
-- From desktop, run command `$ cd {newly-downloaded-directory}` to navigate to the installed directory
+- Use command `$ git clone https://github.com/EricStratton/TapRoom`
+- From desktop, run command `$ cd TapRoom` to navigate to the installed directory
+- Once in root directory of project run command `$cd tap-room` to enter the project directory
 - Run command `$ code .` to open directory in default code editor
-- While inside `{newly-downloaded-directory}` in your terminal run `$ npm install` to download necessary Node packages for application functionality
-- Run command `$ npm run start` to open webpage in defualt browse with an `8080` local server 
-- Alternatively, use command `$ npm run build` to generate dist- folder in your local directory
-- Open `index.html` file located in the dist- folder with your prefered local server tool
-- Requires you perform an `$ npm run build` after altering code to see changes in browser
+- While inside `tap-room` in your terminal run `$ npm install` to download necessary Node packages for application functionality
+- Run command `$ npm run build` to ensure that project succesfully builds on your device
+- Run command `$ npm run start` to open webpage in defualt browse with an `3000` local server 
 
 ## Known Bugs
 
