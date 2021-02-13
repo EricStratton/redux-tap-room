@@ -42,7 +42,8 @@ Create new kegs with name, brand, and price as properties, update existing keg d
 
 ### Component Diagram:
 
-![Component Diagram](src\img\TapRoom.png)
+
+![Component Diagram](./src/img/TapRoom.png)
 
 ## Known Bugs
 
