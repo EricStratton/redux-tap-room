@@ -55,10 +55,10 @@ Do not hesitate to contact me at:
 
 <strattonericj@gmail.com>
 
-# Technologies
+## Technologies
 
 - _Visual Studio Code_
-- _HTML_
+- _HTML5_
 - _CSS_
 - _JavaScript_
 - _Node.js_
