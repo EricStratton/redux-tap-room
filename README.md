@@ -25,14 +25,14 @@ Create new kegs with name, brand, and price as properties, update existing keg d
 
 - Download this repository by clicking the green 'Code' icon and selecting download zip
 - Use your favorite zip.file opener to extract files to your local device
-- Follow instructions below begging with line instructing to run command `$ cd TapRoom`
+- Follow instructions below begging with line instructing to run command `$ cd tap-room`
 
 ### Terminal:
 
 - Open command terminal on local device
 - Navigate to desktop in terminal using `$ cd desktop`
 - Copy repository link by clicking on green 'Code' icon and clicking the clipboard to the right of the url
-- Use command `$ git clone https://github.com/EricStratton/TapRoom`
+- Use command `$ git clone https://github.com/EricStratton/tap-room`
 - From desktop, run command `$ cd TapRoom` to navigate to the installed directory
 - Once in root directory of project run command `$cd tap-room` to enter the project directory
 - Run command `$ code .` to open directory in default code editor
