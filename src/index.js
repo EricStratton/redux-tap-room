@@ -5,7 +5,7 @@ import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import { createStore } from 'redux';
 import reducer from './reducers/keg-list-reducer';
-import Provider from 'react-redux';
+import { Provider } from 'react-redux';
 
 const store = createStore(reducer);
 
