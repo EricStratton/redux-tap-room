@@ -19,13 +19,14 @@ class KegControl extends React.Component {
 
   handleAddingNewKegToList = (newKeg) => {
     const { dispatch } = this.props;
-    const { id, name, brand, price, abv } = newKeg;
+    const { id, name, brand, price, abv, stock } = newKeg;
     const action = {
       type: 'ADD_KEG',
       id,
       name,
       brand,
       price,
+      stock,
       abv
     }
     dispatch(action);
@@ -41,13 +42,14 @@ class KegControl extends React.Component {
 
   handleEditKegInList = (kegToEdit) => {
     const { dispatch } = this.props;
-    const { id, name, brand, price, abv } = kegToEdit;
+    const { id, name, brand, price, abv, stock } = kegToEdit;
     const action = {
       type: 'ADD_KEG',
       id,
       name,
       brand,
       price,
+      stock,
       abv
     }
     dispatch(action); 
