@@ -21,4 +21,18 @@ describe("rootReducer", () => {
   test('Check inital state of formVisibleReducer matches root reducer', () => {
     expect(store.getState().formVisibleOnPage).toEqual(formVisibleReducer(undefined, { type: null }));
   });
+
+  test('Check that ADD_TICKET action works for kegListReducer and root reducer', () => {
+    const action = {
+      type: 'ADD_TICKET',
+      name: 'Happenin\' Hazy IPA',
+      brand: 'Big Head Brews',
+      price: 8,
+      abv: 6,
+      stock: 124,
+      id: 1
+    }
+    store.dispatch(action);
+    expect(store.getState().mainKegList).toEqual(kegListReducer(undefined, action));
+  })
 });
