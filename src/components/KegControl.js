@@ -51,16 +51,7 @@ class KegControl extends React.Component {
 
   handlePoursInKeg = (kegToPour) => {
     const { dispatch } = this.props;
-    const { id, name, brand, price, abv, stock } = kegToPour;
-    const action = {
-      type: 'ADD_KEG',
-      id,
-      name,
-      brand,
-      price,
-      abv,
-      stock: stock - 1 
-    }
+    const action = a.pourFromKeg(kegToPour);
     dispatch(action);
     this.setState({
       editing: false,
