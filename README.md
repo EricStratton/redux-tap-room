@@ -25,16 +25,16 @@ Create new kegs with name, brand, and price as properties, update existing keg d
 
 - Download this repository by clicking the green 'Code' icon and selecting download zip
 - Use your favorite zip.file opener to extract files to your local device
-- Follow instructions below begging with line instructing to run command `$ cd tap-room`
+- Follow instructions below begging with line instructing to run command `$ cd redux-tap-room`
 
 ### Terminal:
 
 - Open command terminal on local device
 - Navigate to desktop in terminal using `$ cd desktop`
 - Copy repository link by clicking on green 'Code' icon and clicking the clipboard to the right of the url
-- Use command `$ git clone https://github.com/EricStratton/tap-room`
+- Use command `$ git clone https://github.com/EricStratton/redux-tap-room`
 - From desktop, run command `$ cd tap-room` to navigate to the installed directory
-- Once in root directory of project run command `$cd tap-room` to enter the project directory
+- Once in root directory of project run command `$cd redux-tap-room` to enter the project directory
 - Run command `$ code .` to open directory in default code editor
 - While inside `tap-room` in your terminal run `$ npm install` to download necessary Node packages for application functionality
 - Run command `$ npm run build` to ensure that project succesfully builds on your device
