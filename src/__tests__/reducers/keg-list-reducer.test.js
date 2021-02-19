@@ -34,7 +34,7 @@ describe('kegListReducer', () => {
   test('Should add new keg data to mainKegList', () => {
     const { name, brand, price, abv, stock, id } = kegData;
     action = {
-      type: 'ADD_TICKET',
+      type: 'ADD_KEG',
       name,
       brand,
       price,
