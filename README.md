@@ -1,6 +1,6 @@
-## Ricc's Rickety TapRoom - React WebPage 
+## Ricc's Rickety TapRoom - React WebPage - State Management with Redux
 
-### _Full CRUD webpage for mainting a keg list at at TapRoom, vs: 02/12/2021_
+### _Full CRUD webpage for mainting a keg list at at TapRoom, vs: 02/19/2021_
 
 ### _Created by: Eric Stratton_
 
@@ -33,10 +33,10 @@ Create new kegs with name, brand, and price as properties, update existing keg d
 - Navigate to desktop in terminal using `$ cd desktop`
 - Copy repository link by clicking on green 'Code' icon and clicking the clipboard to the right of the url
 - Use command `$ git clone https://github.com/EricStratton/redux-tap-room`
-- From desktop, run command `$ cd tap-room` to navigate to the installed directory
+- From desktop, run command `$ cd redux-tap-room` to navigate to the installed directory
 - Once in root directory of project run command `$cd redux-tap-room` to enter the project directory
 - Run command `$ code .` to open directory in default code editor
-- While inside `tap-room` in your terminal run `$ npm install` to download necessary Node packages for application functionality
+- While inside `redux-tap-room` in your terminal run `$ npm install` to download necessary Node packages for application functionality
 - Run command `$ npm run build` to ensure that project succesfully builds on your device
 - Run command `$ npm run start` to open webpage in defualt browse with an `3000` local server 
 
