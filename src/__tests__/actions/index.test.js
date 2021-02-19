@@ -1,8 +1,9 @@
-import * as actions from './../../actions';
+import * as a from './../../actions/index';
+import * as c from './../../actions/ActionTypes';
 
-describe('tap room actions', () => {
+describe('tap room a', () => {
   it('addKeg should create ADD_KEG action', () => {
-    expect(actions.addKeg({
+    expect(a.addKeg({
       name: 'Purrfect Pilsner',
       brand: 'Bear-ery',
       price: 6,
@@ -10,7 +11,7 @@ describe('tap room actions', () => {
       stock: 124,
       id: 1
     })).toEqual({
-      type: 'ADD_KEG',
+      type: c.ADD_KEG,
       name: 'Purrfect Pilsner',
       brand: 'Bear-ery',
       price: 6,
@@ -21,7 +22,7 @@ describe('tap room actions', () => {
   });
 
   it('pourFromKeg should create ADD_KEG action but stock by one', () => {
-    expect(actions.pourFromKeg({
+    expect(a.pourFromKeg({
       name: 'Purrfect Pilsner',
       brand: 'Bear-ery',
       price: 6,
@@ -29,7 +30,7 @@ describe('tap room actions', () => {
       stock: 124,
       id: 1
     })).toEqual({
-      type: 'ADD_KEG',
+      type: c.ADD_KEG,
       name: 'Purrfect Pilsner',
       brand: 'Bear-ery',
       price: 6,
@@ -40,15 +41,15 @@ describe('tap room actions', () => {
   })
 
   it('deleteKeg should create DELETE_KEG action', () => {
-    expect(actions.deleteKeg(1)).toEqual({
-      type: 'DELETE_KEG',
+    expect(a.deleteKeg(1)).toEqual({
+      type: c.DELETE_KEG,
       id: 1
     });
   });
 
   it('toggleForm should create TOGGLE_FORM action', () => {
-    expect(actions.toggleForm()).toEqual({
-      type: 'TOGGLE_FORM'
+    expect(a.toggleForm()).toEqual({
+      type: c.TOGGLE_FORM
     });
   });
 
