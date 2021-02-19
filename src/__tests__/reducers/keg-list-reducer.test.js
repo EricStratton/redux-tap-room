@@ -12,6 +12,21 @@ describe('kegListReducer', () => {
     id: 1
   }
 
+  const currentState = {
+    1: { name: 'Super Saison',
+    brand: 'Super Brews',
+    price: 8,
+    abv: 7,
+    stock: 124,
+    id: 1 },
+    2: { name: 'Serious Stout',
+    brand: 'Moose Beers',
+    price: 10,
+    abv: 12,
+    stock: 124,
+    id: 2 }
+  }
+
   test('Should return default state if no action is passed into reducer', () => {
     expect(kegListReducer({}, { type: null })).toEqual({});
   });
@@ -38,6 +53,21 @@ describe('kegListReducer', () => {
       }
     });
   });
+
+  test('Should delete a keg from mainKegList', () => {
+    action = {
+      type: 'DELETE_KEG',
+      id: 1
+    };
+    expect(kegListReducer(currentState, action)).toEqual({
+      2: { name: 'Serious Stout',
+      brand: 'Moose Beers',
+      price: 10,
+      abv: 12,
+      stock: 124,
+      id: 2 }
+    })
+  })
 
 
 });
