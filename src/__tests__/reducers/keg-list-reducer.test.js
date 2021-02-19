@@ -67,8 +67,8 @@ describe('kegListReducer', () => {
       abv: 12,
       stock: 124,
       id: 2 }
-    })
-  })
+    });
+  });
 
 
 });
