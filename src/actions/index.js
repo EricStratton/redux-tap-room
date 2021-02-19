@@ -9,4 +9,9 @@ export const addKeg = (keg) => {
     stock,
     id
   }
-}
+};
+
+export const deleteKeg = id => ({
+  type: 'DELETE_KEG',
+  id
+});

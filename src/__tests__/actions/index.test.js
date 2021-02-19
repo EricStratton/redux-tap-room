@@ -25,5 +25,5 @@ describe('tap room actions', () => {
       type: 'DELETE_KEG',
       id: 1
     });
-  })
+  });
 })
