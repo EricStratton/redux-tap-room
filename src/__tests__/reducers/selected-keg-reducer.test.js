@@ -3,6 +3,7 @@ import * as c from './../../actions/ActionTypes';
 
 describe("selectedKegReducer", () => {
 
+  let action;
   const currentState = {
     1: { name: 'Super Saison',
     brand: 'Super Brews',
