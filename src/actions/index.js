@@ -35,10 +35,7 @@ export const pourFromKeg = (keg) => {
   }
 };
 
-export const selectKeg = (id) => {
-  const { id } = id;
-  return {
-    type: c.SELECT_KEG,
-    id
-  }
-};
+export const selectKeg = id => ({
+  type: c.SELECT_KEG,
+  id
+});

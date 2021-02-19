@@ -24,15 +24,16 @@ describe("selectedKegReducer", () => {
 
   test('Should select correct keg by ID', () => {
     action = {
-      
+      type: c.SELECT_KEG,
+      id: 1
     };
-    expect(selectedKegReducer({}[1], { type: action })).toEqual({
+    expect(selectedKegReducer(currentState, action)).toEqual({
       1: { name: 'Super Saison',
     brand: 'Super Brews',
     price: 8,
     abv: 7,
     stock: 124,
     id: 1 }
-    })
+    });
   });
 });
