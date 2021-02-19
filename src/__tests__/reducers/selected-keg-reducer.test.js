@@ -19,7 +19,7 @@ describe("selectedKegReducer", () => {
   }
 
   test('Should return default state if no action passed into reducer', () => {
-    expect(selectedKegReducer({}, { type: null })).toEqual({});
+    expect(selectedKegReducer(null, { type: null })).toEqual(null);
   });
 
   test('Should select correct keg by ID', () => {
