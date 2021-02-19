@@ -33,4 +33,12 @@ export const pourFromKeg = (keg) => {
     stock: stock - 1,
     id
   }
-}
+};
+
+export const selectKeg = (id) => {
+  const { id } = id;
+  return {
+    type: c.SELECT_KEG,
+    id
+  }
+};
