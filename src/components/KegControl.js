@@ -9,10 +9,6 @@ import * as a from './../actions';
 
 class KegControl extends React.Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   handleAddingNewKegToList = (newKeg) => {
     const { dispatch } = this.props;
     const action = a.addKeg(newKeg);
