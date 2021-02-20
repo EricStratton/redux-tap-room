@@ -1,10 +1,10 @@
 import * as c from './../actions/ActionTypes';
 
 export default (state = null, action) => {
-  const { keg } = action;
+  const { selectedKeg } = action;
   switch (action.type) {
     case c.SELECT_KEG:
-      return keg;
+      return selectedKeg;
     default:
       return state;
   }
