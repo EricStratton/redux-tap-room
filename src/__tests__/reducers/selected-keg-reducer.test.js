@@ -9,7 +9,7 @@ describe("selectedKegReducer", () => {
     expect(selectedKegReducer(null, { type: null })).toEqual(null);
   });
 
-  test('Should select current keg to return', () => {
+  test('Should return current keg', () => {
     let thisKeg = { name: 'Super Saison',
       brand: 'Super Brews',
       price: 8,
