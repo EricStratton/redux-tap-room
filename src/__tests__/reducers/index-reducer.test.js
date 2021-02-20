@@ -3,8 +3,8 @@ import { createStore } from 'redux';
 import formVisibleReducer from './../../reducers/form-visible-reducer';
 import kegListReducer from './../../reducers/keg-list-reducer';
 import selectedKegReducer from './../../reducers/selected-keg-reducer';
-import * as c from './../../actions/ActionTypes';
 import editFormReducer from '../../reducers/edit-form-reducer';
+import * as c from './../../actions/ActionTypes';
 
 let store = createStore(rootReducer);
 
