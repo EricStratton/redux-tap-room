@@ -23,24 +23,18 @@ describe("selectedKegReducer", () => {
     expect(selectedKegReducer(null, { type: null })).toEqual(null);
   });
 
-  test('Should select correct keg by ID', () => {
-    let keg = { name: 'Super Saison',
+  test('Should select current keg to return', () => {
+    let thisKeg = { name: 'Super Saison',
       brand: 'Super Brews',
       price: 8,
       abv: 7,
       stock: 124,
       id: 1 
-      }
-      action = {
-      type: c.SELECT_KEG,
-      keg: keg }
-    expect(selectedKegReducer(null, action)).toEqual({
-    { name: 'Super Saison',
-        brand: 'Super Brews',
-        price: 8,
-        abv: 7,
-        stock: 124,
-        id: 1 }
-    });
+    }
+    action = {
+    type: c.SELECT_KEG,
+    keg: thisKeg 
+    }
+    expect(selectedKegReducer(null, action)).toEqual(thisKeg);
   });
 });
