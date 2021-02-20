@@ -28,6 +28,7 @@ class KegControl extends React.Component {
   handleChangingSelectedKeg = (id) => { // Am I properly handling this selected keg? // Feels like yes but details view still not working //
     const selectedKeg = this.props.mainKegList[id];
     const { dispatch } = this.props;
+    console.log(selectedKeg);
     const action = a.selectKeg(selectedKeg);
     dispatch(action);
   }
@@ -67,9 +68,9 @@ class KegControl extends React.Component {
 
   handleClick = () => {
     if (this.props.selectedKeg != null) {
-      // const { dispatch } = this.props; // Unsure at best about this. //
-      // const action = a.selectKeg();
-      // dispatch(action);
+      const { dispatch } = this.props; // Unsure at best about this. //
+      const action = a.selectKeg();
+      dispatch(action);
       this.setState({
         // selectedKeg: null,
         editing: false
