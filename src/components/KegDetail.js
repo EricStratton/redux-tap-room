@@ -6,7 +6,7 @@ function KegDetail(props) {
     paddingLeft: '10px'
   };
 
-  const { keg, onClickingDelete, onClickingPour } = props; // Object Destructuring //
+  const { keg, onClickingDelete, onClickingPour } = props;
 
   let sellButton; 
   let poursLeft;
