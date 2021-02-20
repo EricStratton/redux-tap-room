@@ -62,7 +62,9 @@ class KegControl extends React.Component {
   }
 
   handleEditClick = () => {
-    this.setState({ editing: true })
+    const { dispatch } = this.props;
+    const action = a.toggleEdit();
+    dispatch(action);
   }
 
   handleClick = () => {
@@ -70,7 +72,6 @@ class KegControl extends React.Component {
       const { dispatch } = this.props;
       const action = a.deselectKeg();
       dispatch(action);
-      console.log(action);
       this.setState({
         editing: false
       });
