@@ -4,6 +4,7 @@ import formVisibleReducer from './../../reducers/form-visible-reducer';
 import kegListReducer from './../../reducers/keg-list-reducer';
 import selectedKegReducer from './../../reducers/selected-keg-reducer';
 import * as c from './../../actions/ActionTypes';
+import editFormReducer from '../../reducers/edit-form-reducer';
 
 let store = createStore(rootReducer);
 
@@ -13,7 +14,8 @@ describe("rootReducer", () => {
     expect(rootReducer({}, { type: null })).toEqual({
       mainKegList: {},
       formVisibleOnPage: false,
-      selectedKeg: null
+      selectedKeg: null,
+      editing: false
     });
   });
 
@@ -27,7 +29,11 @@ describe("rootReducer", () => {
 
   test('Check initial state of selectedKegReducer matches root reducer', () => {
     expect(store.getState().selectedKeg).toEqual(selectedKegReducer(undefined, { type: null }));
-  })
+  });
+
+  test('Check intial state of editFormReducer matches root reducer', () => {
+    expect(store.getState().editing).toEqual(editFormReducer(undefined, { type: null }));
+  });
 
   test('Check that ADD_KEG action works for kegListReducer and root reducer', () => {
     const action = {
@@ -63,6 +69,14 @@ describe("rootReducer", () => {
     }
     store.dispatch(action);
     expect(store.getState().selectedKeg).toEqual(selectedKegReducer(undefined, action));
+  });
+
+  test('Check that TOGGLE_EDIT action works for editFormReducer and root reducer', () => {
+    const action = {
+      type: c.TOGGLE_EDIT
+    }
+    store.dispatch(action);
+    expect(store.getState().editing).toEqual(editFormReducer(undefined, action));
   });
 
 });
