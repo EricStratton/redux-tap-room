@@ -51,3 +51,7 @@ export const selectKeg = (selectedKeg) => {
 export const deselectKeg = () => ({
   type: c.DESELECT_KEG
 });
+
+export const toggleEdit = () => ({
+  type: c.TOGGLE_EDIT
+});
