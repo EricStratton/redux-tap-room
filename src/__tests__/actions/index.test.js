@@ -53,4 +53,28 @@ describe('tap room a', () => {
     });
   });
 
+  it('selectKeg should create SELECT_KEG action', () => {
+    expect(a.selectKeg({ 
+    name: 'Purrfect Pilsner',
+    brand: 'Bear-ery',
+    price: 6,
+    abv: 5,
+    stock: 124,
+    id: 1})).toEqual({
+      type: c.SELECT_KEG,
+      name: 'Purrfect Pilsner',
+      brand: 'Bear-ery',
+      price: 6,
+      abv: 5,
+      stock: 124,
+      id: 1
+    });
+  });
+
+  it('deselectKeg should create DESELECT_KEG action', () => {
+    expect(a.deselectKeg()).toEqual({
+      type: c.DESELECT_KEG
+    });
+  });
+    
 });
