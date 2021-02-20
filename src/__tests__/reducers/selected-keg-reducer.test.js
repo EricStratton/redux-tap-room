@@ -28,4 +28,17 @@ describe("selectedKegReducer", () => {
     }
     expect(selectedKegReducer(null, action)).toEqual(thisKeg);
   });
+
+  test('Should return null when deselecting keg', () => {
+    action = {
+      type: c.DESELECT_KEG,
+      name: 'Super Saison',
+      brand: 'Super Brews',
+      price: 8,
+      abv: 7,
+      stock: 124,
+      id: 1
+      }
+    expect(selectedKegReducer(null, action)).toEqual(null);
+  });
 });
