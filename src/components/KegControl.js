@@ -67,9 +67,9 @@ class KegControl extends React.Component {
   handleClick = () => {
     if (this.props.selectedKeg != null) {
       const { dispatch } = this.props;
-      const action = a.selectKeg();
-      console.log(action);
+      const action = a.deselectKeg();
       dispatch(action);
+      console.log(action);
       this.setState({
         // selectedKeg: null,
         editing: false

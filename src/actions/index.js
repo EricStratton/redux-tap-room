@@ -35,8 +35,8 @@ export const pourFromKeg = (keg) => {
   }
 };
 
-export const selectKeg = (selectKeg) => {
-  const { name, brand, price, abv, stock, id } = selectKeg;
+export const selectKeg = (selectedKeg) => {
+  const { name, brand, price, abv, stock, id } = selectedKeg;
   return {
     type: c.SELECT_KEG,
     name,
@@ -47,3 +47,7 @@ export const selectKeg = (selectKeg) => {
     id
   };
 }
+
+export const deselectKeg = () => ({
+  type: c.DESELECT_KEG
+});
