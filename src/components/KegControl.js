@@ -25,11 +25,12 @@ class KegControl extends React.Component {
     dispatch(action2);
   }
 
-  handleChangingSelectedKeg = (id) => { // Am I properly handling this selected keg? // Feels like yes but details view still not working //
+  handleChangingSelectedKeg = (id) => { 
     const selectedKeg = this.props.mainKegList[id];
     const { dispatch } = this.props;
     console.log(selectedKeg);
     const action = a.selectKeg(selectedKeg);
+    console.log(action); // Shows 'SELECT_KEG' action being called with correct keg object.
     dispatch(action);
   }
 
@@ -68,8 +69,9 @@ class KegControl extends React.Component {
 
   handleClick = () => {
     if (this.props.selectedKeg != null) {
-      const { dispatch } = this.props; // Unsure at best about this. //
+      const { dispatch } = this.props;
       const action = a.selectKeg();
+      console.log(action);
       dispatch(action);
       this.setState({
         // selectedKeg: null,
@@ -81,13 +83,12 @@ class KegControl extends React.Component {
       dispatch(action);
       };
     }
-  
 
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
       if (this.state.editing) {
-      currentlyVisibleState = <EditKegForm keg={ this.state.selectedKeg } onEditKeg={ this.handleEditKegInList } />
+      currentlyVisibleState = <EditKegForm keg={ this.props.selectedKeg } onEditKeg={ this.handleEditKegInList } />
       buttonText = "Return to Keg List";
     } else if (this.props.selectedKeg != null) {
       // Details view is not currently working. // Related to how keg is being passed down as a prop? // Related to how the handleClick method is refering to selectedKeg action? //
@@ -119,7 +120,7 @@ const mapStateToProps = state => {
   return {
     mainKegList: state.mainKegList,
     formVisibleOnPage: state.formVisibleOnPage,
-    selectedKeg: state.selectKeg
+    selectedKeg: state.selectedKeg
   }
 }
 
