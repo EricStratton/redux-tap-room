@@ -40,9 +40,22 @@ export const pourFromKeg = (keg) => {
 //   id
 // });
 
-export const selectKeg = (selectedKeg) => {
+// export const selectKeg = (selectedKeg) => {
+//   return {
+//     type: c.SELECT_KEG,
+//     selectedKeg
+//   }
+// };
+
+export const selectKeg = (selectKeg) => {
+  const { name, brand, price, abv, stock, id } = selectKeg;
   return {
     type: c.SELECT_KEG,
-    selectedKeg
-  }
-};
+    name,
+    brand,
+    price,
+    abv,
+    stock,
+    id
+  };
+}
