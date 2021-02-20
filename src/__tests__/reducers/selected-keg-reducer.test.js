@@ -19,7 +19,12 @@ describe("selectedKegReducer", () => {
     }
     action = {
     type: c.SELECT_KEG,
-    keg: thisKeg 
+    name: 'Super Saison',
+    brand: 'Super Brews',
+    price: 8,
+    abv: 7,
+    stock: 124,
+    id: 1
     }
     expect(selectedKegReducer(null, action)).toEqual(thisKeg);
   });
