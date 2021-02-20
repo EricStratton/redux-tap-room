@@ -72,13 +72,13 @@ class KegControl extends React.Component {
       const action = a.deselectKeg();
       dispatch(action);
       if(this.props.editing) {
-        const action3 = a.toggleEdit();
-        dispatch(action3);
+        const action2 = a.toggleEdit();
+        dispatch(action2);
       }
     } else {
       const { dispatch } = this.props;
-      const action = a.toggleForm();
-      dispatch(action);
+      const action3 = a.toggleForm();
+      dispatch(action3);
       };
     }
 
