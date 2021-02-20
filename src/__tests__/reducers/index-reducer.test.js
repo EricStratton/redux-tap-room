@@ -2,6 +2,7 @@ import rootReducer from './../../reducers/index';
 import { createStore } from 'redux';
 import formVisibleReducer from './../../reducers/form-visible-reducer';
 import kegListReducer from './../../reducers/keg-list-reducer';
+import selectedKegReducer from './../../reducers/selected-keg-reducer';
 import * as c from './../../actions/ActionTypes';
 
 let store = createStore(rootReducer);
@@ -24,6 +25,10 @@ describe("rootReducer", () => {
     expect(store.getState().formVisibleOnPage).toEqual(formVisibleReducer(undefined, { type: null }));
   });
 
+  test('Check initial state of selectedKegReducer matches root reducer', () => {
+    expect(store.getState().selectedKeg).toEqual(selectedKegReducer(undefined, { type: null }));
+  })
+
   test('Check that ADD_KEG action works for kegListReducer and root reducer', () => {
     const action = {
       type: c.ADD_KEG,
@@ -44,6 +49,20 @@ describe("rootReducer", () => {
     }
     store.dispatch(action);
     expect(store.getState().formVisibleOnPage).toEqual(formVisibleReducer(undefined, action));
+  });
+
+  test('Check that SELECT_KEG action works for selectedKegReducer and root reducer', () => {
+    const action = {
+      type: c.SELECT_KEG,
+      name: 'Happenin\' Hazy IPA',
+      brand: 'Big Head Brews',
+      price: 8,
+      abv: 6,
+      stock: 124,
+      id: 1
+    }
+    store.dispatch(action);
+    expect(store.getState().selectedKeg).toEqual(selectedKegReducer(undefined, action));
   });
 
 });
