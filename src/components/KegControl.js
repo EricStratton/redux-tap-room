@@ -12,7 +12,6 @@ class KegControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // selectedKeg: null,
       editing: false
     };
   }
@@ -28,9 +27,7 @@ class KegControl extends React.Component {
   handleChangingSelectedKeg = (id) => { 
     const selectedKeg = this.props.mainKegList[id];
     const { dispatch } = this.props;
-    console.log(selectedKeg);
     const action = a.selectKeg(selectedKeg);
-    console.log(action); // Shows 'SELECT_KEG' action being called with correct keg object.
     dispatch(action);
   }
 
@@ -91,7 +88,6 @@ class KegControl extends React.Component {
       currentlyVisibleState = <EditKegForm keg={ this.props.selectedKeg } onEditKeg={ this.handleEditKegInList } />
       buttonText = "Return to Keg List";
     } else if (this.props.selectedKeg != null) {
-      // Details view is not currently working. // Related to how keg is being passed down as a prop? // Related to how the handleClick method is refering to selectedKeg action? //
       currentlyVisibleState = <KegDetail keg={ this.props.selectedKeg } onClickingPour={ this.handlePoursInKeg } onClickingEdit={ this.handleEditClick } onClickingDelete={ this.handleDeletingKeg }/>
       buttonText = "Return to Keg List";
     } else if (this.props.formVisibleOnPage) {
