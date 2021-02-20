@@ -77,4 +77,10 @@ describe('tap room a', () => {
     });
   });
     
+  it('toggleEdit should create TOGGLE_EDIT action', () => {
+    expect(a.toggleEdit()).toEqual({
+      type: c.TOGGLE_EDIT
+    });
+  });
+  
 });
