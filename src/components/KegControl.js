@@ -34,10 +34,11 @@ class KegControl extends React.Component {
   handleEditKegInList = (kegToEdit) => {
     const { dispatch } = this.props;
     const action = a.addKeg(kegToEdit);
-    dispatch(action); 
+    dispatch(action);
+    const action2 = a.deselectKeg();
+    dispatch(action2); 
     this.setState({
       editing: false,
-      selectedKeg: null
     });
   }
 
@@ -45,18 +46,18 @@ class KegControl extends React.Component {
     const { dispatch } = this.props;
     const action = a.deleteKeg(id);
     dispatch(action);
-    this.setState({
-      selectedKeg: null
-    });
+    const action2 = a.deselectKeg();
+    dispatch(action2);
   }
 
   handlePoursInKeg = (kegToPour) => {
     const { dispatch } = this.props;
     const action = a.pourFromKeg(kegToPour);
     dispatch(action);
+    const action2 = a.deselectKeg();
+    dispatch(action2);
     this.setState({
       editing: false,
-      selectedKeg: null
     });
   }
 
