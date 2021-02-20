@@ -6,7 +6,7 @@
 
 ## Description
 
-Create new kegs with name, brand, and price as properties, update existing keg details, click on keg in list to view its details, remove keg from list when necessary. Application built with React using Redux to handle state. Built for educational purposes with a goal of managing all state via Redux even if React could manage the slice with local state. 
+ Application built with React using Redux to handle state to manage a mock local taphouse's keg list. Create new kegs with name, brand, and price as properties, update existing keg details, click on keg in list to view its details, remove keg from list when necessary. Built for educational purposes with a goal of managing all state via Redux even if React could manage the slice with local state. 
 
 ## Setup/Instillation
 
