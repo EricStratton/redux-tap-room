@@ -71,7 +71,6 @@ class KegControl extends React.Component {
       dispatch(action);
       console.log(action);
       this.setState({
-        // selectedKeg: null,
         editing: false
       });
     } else {
